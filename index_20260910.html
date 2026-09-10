@@ -2,16 +2,32 @@
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>arXiv 数学日报 · 2026-09-10</title><style>
-:root{--bg:#0f1117;--card:#171a23;--line:#262b3a;--fg:#e8eaf0;--sub:#9aa3b5;--acc:#7aa2ff;--acc2:#4ecca3}
+body{--bg:#0f1117;--card:#181b25;--line:#2a2f40;--fg:#eef0f6;--sub:#98a1b3;--acc:#7aa2ff;--acc2:#57d9a3;--navbg:rgba(15,17,23,.93);--chip:#20242f}
+body[data-theme=yellow]{--bg:#f7c948;--card:#fff6d8;--line:#d9a520;--fg:#231a00;--sub:#6d5310;--acc:#7a4f00;--acc2:#3c6b12;--navbg:rgba(247,201,72,.95);--chip:#ffe89a}
+body[data-theme=white]{--bg:#ffffff;--card:#f5f6f8;--line:#d8dce3;--fg:#181c24;--sub:#5b6472;--acc:#1d5fd6;--acc2:#0a7d4f;--navbg:rgba(255,255,255,.95);--chip:#eef0f4}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--fg);font-family:"Segoe UI","Microsoft YaHei",system-ui,sans-serif;line-height:1.7}
-.wrap{max-width:960px;margin:0 auto;padding:32px 20px 64px}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:"Segoe UI","Microsoft YaHei",system-ui,sans-serif;line-height:1.7;transition:background .25s,color .25s}
+a{color:var(--acc)}
+nav.topbar{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--navbg);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+.topinner{max-width:960px;margin:0 auto;padding:9px 20px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.brand{font-weight:700;font-size:13.5px;margin-right:4px}
+.catbtns{display:flex;gap:6px;flex-wrap:wrap}
+a.catbtn{background:var(--chip);border:1px solid var(--line);color:var(--fg);border-radius:8px;padding:2px 10px;font-size:12.5px;text-decoration:none;display:inline-flex;gap:5px;align-items:center}
+a.catbtn b{color:var(--acc);font-weight:600;font-size:11.5px}
+a.catbtn.empty{opacity:.38;pointer-events:none;text-decoration:line-through}
+.themes{margin-left:auto;display:flex;gap:6px}
+.themes button{cursor:pointer;border-radius:8px;padding:2px 12px;font-size:12.5px;border:1px solid var(--line);background:var(--chip);color:var(--fg)}
+.themes button.active{outline:2px solid var(--acc);font-weight:700}
+.wrap{max-width:960px;margin:0 auto;padding:84px 20px 64px}
 header h1{font-size:26px;letter-spacing:.5px}
 header .date{color:var(--sub);margin-top:6px;font-size:14px}
 .stats{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 8px}
 .chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13px;color:var(--sub)}
 .chip b{color:var(--fg)}
-section.cat{margin-top:34px}
+a.chip{text-decoration:none}
+a.chip:hover{border-color:var(--acc)}
+section.cat{margin-top:34px;scroll-margin-top:96px}
 section.cat h2{font-size:18px;border-left:4px solid var(--acc);padding-left:10px}
 section.cat h2 span{color:var(--sub);font-weight:400;font-size:13px;margin-left:8px}
 article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-top:14px}
@@ -22,17 +38,22 @@ article .zh-title{color:var(--acc);font-size:15px;margin-top:4px}
 .one-line{color:var(--acc2);font-size:14px;margin:8px 0}
 details{margin-top:8px}
 summary{cursor:pointer;color:var(--sub);font-size:13.5px}
-p.abs,p.ai{font-size:14px;color:#cfd4e0;margin-top:8px;text-align:justify}
+p.abs,p.ai{font-size:14px;color:var(--fg);margin-top:8px;text-align:justify;opacity:.92}
 p.ai{border-left:3px solid var(--acc2);padding-left:10px}
 footer{margin-top:48px;color:var(--sub);font-size:12.5px;text-align:center}
-a.top{color:var(--acc);text-decoration:none;font-size:12px}
+footer a{color:var(--acc);text-decoration:none}
+table.list{width:100%;border-collapse:collapse;margin-top:24px;background:var(--card)}
+table.list th{color:var(--sub);text-align:left;padding:10px 14px;border-bottom:1px solid var(--line)}
+table.list td{padding:10px 14px;border-bottom:1px solid var(--line)}
+table.list a{color:var(--acc);text-decoration:none}
 </style></head><body>
+<nav class="topbar" id="page-top"><div class="topinner"><span class="brand">arXiv 数学日报</span><div class="catbtns"><a class="catbtn" href="#cat-math-DG">DG 微分几何<b>11</b></a><a class="catbtn" href="#cat-math-GN">GN 一般拓扑<b>2</b></a><a class="catbtn" href="#cat-math-GT">GT 几何拓扑<b>6</b></a><a class="catbtn" href="#cat-math-GR">GR 群论<b>4</b></a><a class="catbtn" href="#cat-math-MG">MG 度量几何<b>10</b></a><a class="catbtn" href="#cat-math-NT">NT 数论<b>12</b></a></div><div class="themes"><button data-theme="black">黑</button><button data-theme="yellow">黄</button><button data-theme="white">白</button></div></div></nav>
 <div class="wrap">
 <header>
 <h1>arXiv 数学论文日报</h1>
 <div class="date">2026-09-10 · 抓取窗口 24 小时 · 分区: math.DG / math.GN / math.GT / math.GR / math.MG / math.NT</div>
-<div class="stats"><span class="chip">当日新论文 <b>41</b> 篇</span><span class="chip">math.DG 微分几何 <b>11</b></span><span class="chip">math.GN 一般拓扑 <b>2</b></span><span class="chip">math.GT 几何拓扑 <b>6</b></span><span class="chip">math.GR 群论 <b>4</b></span><span class="chip">math.MG 度量几何 <b>10</b></span><span class="chip">math.NT 数论 <b>12</b></span></div></header>
-<section class="cat"><h2>math.DG · 微分几何<span>11 篇（含跨分类）</span></h2>
+<div class="stats"><span class="chip">当日新论文 <b>41</b> 篇</span><a class="chip" href="#cat-math-DG">math.DG 微分几何 <b>11</b></a><a class="chip" href="#cat-math-GN">math.GN 一般拓扑 <b>2</b></a><a class="chip" href="#cat-math-GT">math.GT 几何拓扑 <b>6</b></a><a class="chip" href="#cat-math-GR">math.GR 群论 <b>4</b></a><a class="chip" href="#cat-math-MG">math.MG 度量几何 <b>10</b></a><a class="chip" href="#cat-math-NT">math.NT 数论 <b>12</b></a></div></header>
+<section class="cat" id="cat-math-DG"><h2>math.DG · 微分几何<span>11 篇（含跨分类）</span></h2>
 <article id="p2609.10159">
 <h3>Holomorphic functions on complete Hermitian manifolds with flat Chern connection, II</h3>
 <div class="zh-title">完备平坦Chern联络Hermitian流形上的全纯函数（II）</div>
@@ -122,7 +143,7 @@ a.top{color:var(--acc);text-decoration:none;font-size:12px}
 <details><summary>AI 解读</summary><p class="ai">Q-曲率与σ₂的组合是四维及高维共形几何的自然泛函，但刚性何时成立缺乏精确参数图景。本文给出完整答案：阈值a=-4处刚性精确切换，恰是Schwarzschild几何出现的临界值——打靶构造的细颈在临界侧坍缩成带引力的Schwarzschild模型，把共形刚性问题与数学相对论的精确解连接起来。四维情形甚至不需要正数量曲率假设即有更大参数区间刚性，结果附带确定颈部渐近尺度，定量信息罕见而完整。</p></details>
 </article>
 </section>
-<section class="cat"><h2>math.GN · 一般拓扑<span>2 篇（含跨分类）</span></h2>
+<section class="cat" id="cat-math-GN"><h2>math.GN · 一般拓扑<span>2 篇（含跨分类）</span></h2>
 <article id="p2609.10447">
 <h3>Compact totally separated types</h3>
 <div class="zh-title">紧全分离类型</div>
@@ -140,7 +161,7 @@ a.top{color:var(--acc);text-decoration:none;font-size:12px}
 <details><summary>AI 解读</summary><p class="ai">偏度量允许点到自身的&#x27;自距&#x27;非零，在计算机科学域论中地位重要，但双曲性理论此前缺乏对应物。本文把Gromov积及其双曲性判据系统移植到偏度量框架，并比较偏度量与诱导度量两套双曲性的一致性，给出可互推的定量关系。切比雪夫集构造的度量空间是泛函分析经典对象，其Gromov积与中点映射分析连接了逼近论与度量几何两个传统。</p></details>
 </article>
 </section>
-<section class="cat"><h2>math.GT · 几何拓扑<span>6 篇（含跨分类）</span></h2>
+<section class="cat" id="cat-math-GT"><h2>math.GT · 几何拓扑<span>6 篇（含跨分类）</span></h2>
 <article id="p2609.10023">
 <h3>Overlap-Helly theorems</h3>
 <div class="zh-title">重叠型Helly定理</div>
@@ -190,7 +211,7 @@ a.top{color:var(--acc);text-decoration:none;font-size:12px}
 <details><summary>AI 解读</summary><p class="ai">物理因果结构与拓扑不变量的联系近年受到关注，Allen–Swenberg构造的链环族为&#x27;不变量能否探测因果性&#x27;提供了判别标尺。本文对一大类medial quandle（含全部Alexander quandle）给出否定判决——等价关系障碍使其丧失区分能力；同时以充分条件和实例证明区分可行。tangle着色广义定理是方法层面贡献，可推广到更宽泛的quandle家族能力评估。</p></details>
 </article>
 </section>
-<section class="cat"><h2>math.GR · 群论<span>4 篇（含跨分类）</span></h2>
+<section class="cat" id="cat-math-GR"><h2>math.GR · 群论<span>4 篇（含跨分类）</span></h2>
 <article id="p2609.10281">
 <h3>Finite presentations of metabelian groups: effective enumeration via Laurent relations</h3>
 <div class="zh-title">metabelian群有限表示的Laurent关系有效枚举</div>
@@ -224,7 +245,7 @@ a.top{color:var(--acc);text-decoration:none;font-size:12px}
 <details><summary>AI 解读</summary><p class="ai">均和性由Følner子空间刻画，但&#x27;子余代数版本&#x27;此前未成为系统定义——本文证明舍入定理使其合法且更丰富：李代数均和性获得与Elek代数定义的等价刻画，同时天然覆盖Hopf模相对版本。对群的应用直接解决Gromov关于均和群所有模均和性的断言，封闭性与次增长例子把Kac–Moody、包络代数等无限维对象纳入。&#x27;非初等均和李代数&#x27;例子说明该层级比群论情形更复杂。</p></details>
 </article>
 </section>
-<section class="cat"><h2>math.MG · 度量几何<span>10 篇（含跨分类）</span></h2>
+<section class="cat" id="cat-math-MG"><h2>math.MG · 度量几何<span>10 篇（含跨分类）</span></h2>
 <article id="p2609.10208">
 <h3>The measure contraction property on Grushin spaces</h3>
 <div class="zh-title">Grushin空间上的测度收缩性质</div>
@@ -306,7 +327,7 @@ a.top{color:var(--acc);text-decoration:none;font-size:12px}
 <details><summary>AI 解读</summary><p class="ai">Wasserstein独立性度量将&#x27;最大相关&#x27;问题几何化，一维经典答案是Frechet–Hoeffding界下的单调耦合，但多维与一般度量下极值耦合结构长期开放。本文在高斯情形对任意n确认极值猜想方向，并把问题推广到&#x27;给定边际离参考高斯最远&#x27;的一般μ刻画，答案由平方可积变换群上的变分决定。结果对概率度量几何、机器学习中的耦合正则化与Wasserstein相关结构研究可直接引用。</p></details>
 </article>
 </section>
-<section class="cat"><h2>math.NT · 数论<span>12 篇（含跨分类）</span></h2>
+<section class="cat" id="cat-math-NT"><h2>math.NT · 数论<span>12 篇（含跨分类）</span></h2>
 <article id="p2609.10328">
 <h3>Positivity and Asymptotics for Chenevier&#x27;s Orthogonal Polynomials</h3>
 <div class="zh-title">Chenevier正交多项式的正性与渐近</div>
@@ -404,5 +425,26 @@ a.top{color:var(--acc);text-decoration:none;font-size:12px}
 <details><summary>AI 解读</summary><p class="ai">Gelfand对(复约化群, 对称子群)的特种理论在p进与实情形有大量结果，复约化群作为p进群对偶的标准模版本此前只完成一半（必要侧）。本文以Suzuki–Tamori重数机器闭合充分性，得到完全的组合判据——特征标按无不动点对合与*运算配对。GL_m(H)作为酉群对偶的对称子群，其特种刻画对酉群周期的基谱分解与Rankin–Selberg积分构造有后续价值。</p></details>
 </article>
 </section>
-<footer>本页由定时任务自动生成 · 数据来源 arXiv.org · 中文内容为 AI 精修翻译与解读，仅供学术参考</footer>
-</div></body></html>
+<footer>本页由定时任务自动生成 · 数据来源 arXiv.org · 中文内容为 AI 精修翻译与解读，仅供学术参考 ｜ <a href="#page-top">返回顶部</a></footer>
+</div>
+
+<script>
+(function(){
+  var KEY='arxiv-daily-theme';
+  var btns=document.querySelectorAll('.themes button');
+  function apply(t){
+    if(['black','yellow','white'].indexOf(t)<0){t='black';}
+    document.body.setAttribute('data-theme',t);
+    for(var i=0;i<btns.length;i++){
+      btns[i].className=(btns[i].getAttribute('data-theme')===t)?'active':'';
+    }
+    try{localStorage.setItem(KEY,t);}catch(e){}
+  }
+  for(var i=0;i<btns.length;i++){
+    (function(b){b.addEventListener('click',function(){apply(b.getAttribute('data-theme'));});})(btns[i]);
+  }
+  var s=null;try{s=localStorage.getItem(KEY);}catch(e){}
+  apply(s||'black');
+})();
+</script>
+</body></html>
