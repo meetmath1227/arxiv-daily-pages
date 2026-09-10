@@ -16,7 +16,11 @@ nav.topbar{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--navbg
 a.catbtn{background:var(--chip);border:1px solid var(--line);color:var(--fg);border-radius:8px;padding:2px 10px;font-size:12.5px;text-decoration:none;display:inline-flex;gap:5px;align-items:center}
 a.catbtn b{color:var(--acc);font-weight:600;font-size:11.5px}
 a.catbtn.empty{opacity:.38;pointer-events:none;text-decoration:line-through}
-.themes{margin-left:auto;display:flex;gap:6px}
+.pnav{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+a.pbtn{background:var(--chip);border:1px solid var(--line);color:var(--fg);border-radius:8px;padding:2px 10px;font-size:12.5px;text-decoration:none;white-space:nowrap}
+a.pbtn:hover{border-color:var(--acc)}
+span.pbtn{background:var(--chip);border:1px solid var(--line);color:var(--fg);border-radius:8px;padding:2px 10px;font-size:12.5px;opacity:.38;text-decoration:line-through;white-space:nowrap}
+.themes{display:flex;gap:6px}
 .themes button{cursor:pointer;border-radius:8px;padding:2px 12px;font-size:12.5px;border:1px solid var(--line);background:var(--chip);color:var(--fg)}
 .themes button.active{outline:2px solid var(--acc);font-weight:700}
 .wrap{max-width:960px;margin:0 auto;padding:84px 20px 64px}
@@ -47,7 +51,7 @@ table.list th{color:var(--sub);text-align:left;padding:10px 14px;border-bottom:1
 table.list td{padding:10px 14px;border-bottom:1px solid var(--line)}
 table.list a{color:var(--acc);text-decoration:none}
 </style></head><body>
-<nav class="topbar" id="page-top"><div class="topinner"><span class="brand">arXiv 数学日报</span><span style="color:var(--sub);font-size:12.5px">全局索引</span><div class="themes"><button data-theme="black">黑</button><button data-theme="yellow">黄</button><button data-theme="white">白</button></div></div></nav>
+<nav class="topbar" id="page-top"><div class="topinner"><span class="brand">arXiv 数学日报</span><span style="color:var(--sub);font-size:12.5px">全局索引</span><div class="pnav"><a class="pbtn" href="index_20260910.html" title="最新一期：2026-09-10">最新一期 2026-09-10 →</a></div><div class="themes"><button data-theme="black">黑</button><button data-theme="yellow">黄</button><button data-theme="white">白</button></div></div></nav>
 <div class="wrap"><header><h1>arXiv 数学论文日报 · 全局索引</h1>
 <div class="date">分区: math.DG / math.GN / math.GT / math.GR / math.MG / math.NT · 每日 11:00 更新</div></header>
 <table class="list"><tr><th>日期</th><th>数量</th><th>分区分布</th></tr>
